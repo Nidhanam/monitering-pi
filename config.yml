@@ -17,7 +17,9 @@ monitoring_ping_hosts:  # [URL];[HUMAN_READABLE_NAME]
   - http://www.google.com/;google.com
   - https://github.com/;github.com
   - https://www.apple.com/;apple.com
-  - https://www.nidhanam.org/;nidhanam.org
+  - https://nidhanam.org/;nidhanam-regisration
+  - https://admin.nidhanam.org:1903/mobileappv2/admin/login.php;nidhanam-admin-portal
+  - https://api.nidhanam.org:19102/mobileappv2/webpages/aboutus.html;nidhanam-api
 
 # Shelly Plug configuration. (Also requires `monitoring_enable`)
 shelly_plug_enable: false
