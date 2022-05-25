@@ -91,7 +91,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 0,
+        "x": 6,
         "y": 0
       },
       "id": 8,
@@ -166,7 +166,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 3,
+        "x": 9,
         "y": 0
       },
       "id": 14,
@@ -229,7 +229,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 6,
+        "x": 12,
         "y": 0
       },
       "id": 17,
@@ -292,7 +292,7 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 9,
+        "x": 15,
         "y": 0
       },
       "id": 18,
@@ -338,6 +338,18 @@
               {
                 "color": "semi-dark-blue",
                 "value": null
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 0.025
+              },
+              {
+                "color": "semi-dark-red",
+                "value": 0.030
               }
             ]
           },
@@ -348,7 +360,7 @@
       "gridPos": {
         "h": 3,
         "w": 6,
-        "x": 12,
+        "x": 18,
         "y": 0
       },
       "id": 19,
@@ -391,79 +403,40 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgb(255, 255, 255)",
+                "color": "dark-red",
                 "value": null
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 3,
-        "x": 18,
-        "y": 0
-      },
-      "id": 20,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "probe_http_version{instance=\"$target\"}",
-          "instant": true,
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "HTTP version",
-      "type": "stat"
-    },
-    {
-      "datasource": "prometheus",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
+              },
               {
-                "color": "rgb(255, 255, 255)",
-                "value": null
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "dark-yellow",
+                "value": 1
+              },
+              {
+                "color": "dark-orange",
+                "value": 2
+              },
+              {
+                "color": "dark-red",
+                "value": 3
               }
             ]
           },
-          "unit": "none"
+          "unit": "sec"
         },
         "overrides": []
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 21,
+        "w": 6,
+        "x": 0,
         "y": 0
       },
       "id": 21,
       "options": {
-        "colorMode": "value",
+        "colorMode": "background",
         "graphMode": "area",
         "justifyMode": "auto",
         "orientation": "auto",
@@ -479,8 +452,8 @@
       "pluginVersion": "7.2.0",
       "targets": [
         {
-          "expr": "probe_http_redirects{instance=\"$target\"}",
-          "instant": true,
+          "expr": "probe_duration_seconds{instance=\"$target\"}",
+          "instant": false,
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -488,7 +461,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Redirect(s)",
+      "title": "Response time",
       "type": "stat"
     },
     {
